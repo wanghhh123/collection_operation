@@ -40,7 +40,7 @@ public class UserServiceTest {
 
     @Test
     public void delUser(){
-        userService.delUser(2);
+        userService.delUser(1);
         userService.listUser();
     }
 

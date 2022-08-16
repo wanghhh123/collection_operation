@@ -171,12 +171,20 @@ public class UserService {
         System.out.println("登陆成功");
     }
 
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
     /**
      * 根据用户id查询信息
      * @param id
      * @return
      */
-    private User findUserByUserId(Integer id) {
+    public User findUserByUserId(Integer id) {
         Optional<User> optionalUser= users.stream().filter(u -> u.getId().equals(id)).findFirst();
         return optionalUser.isPresent()?optionalUser.get():null;
 
